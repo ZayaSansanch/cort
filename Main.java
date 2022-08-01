@@ -4,7 +4,7 @@ import javax.swing.*;    // Using Swing's components and containers
 
 /** Custom Drawing Code Template */
 // A Swing application extends javax.swing.JFrame
-public class Main2 extends JFrame implements KeyListener, MouseListener {
+public class Main extends JFrame implements KeyListener, MouseListener {
     // Define constants
     public static final int CANVAS_WIDTH  = 640;
     public static final int CANVAS_HEIGHT = 480;
@@ -17,7 +17,7 @@ public class Main2 extends JFrame implements KeyListener, MouseListener {
     private int y = 100;
 
     // Constructor to set up the GUI components and event handlers
-    public Main2() {
+    public Main() {
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
@@ -83,7 +83,7 @@ public class Main2 extends JFrame implements KeyListener, MouseListener {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                Main2 main = new Main2(); // Let the constructor do the job
+                new Main(); // Let the constructor do the job
             }
         });
     }
